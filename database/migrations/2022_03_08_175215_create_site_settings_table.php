@@ -17,7 +17,6 @@ class CreateSiteSettingsTable extends Migration
             $table->bigIncrements('id');
             $table->string('system_name')->nullable();
             $table->string('phone')->nullable();
-            $table->string('mobile')->nullable();
             $table->string('address')->nullable();
             $table->string('slogan')->nullable();
             $table->string('facebook')->nullable();

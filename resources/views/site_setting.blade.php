@@ -11,10 +11,6 @@
       <label for="exampleInputPassword1" class="form-label">Phone</label>
       <input type="text" class="form-control" name="phone" >
     </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Mobile</label>
-        <input type="text" class="form-control"  name="mobile">
-      </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">address</label>
         <input type="text" class="form-control" name="address" >
