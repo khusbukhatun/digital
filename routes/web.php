@@ -13,6 +13,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\restaurants;
 use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\SiteSettingController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,4 +41,7 @@ Route::get('/admin/logout',[AdminLoginController::class,'adminLogout'])->name('a
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::view('/user/dashboard', 'layouts.frontend.userdashboard');
+Route::view('/user/dashboard', 'layouts.frontend.layouts.master');
+Route::get('/site_setting',[SiteSettingController::class,'site'])->name('site.setting');
+Route::post('/update_setting',[SiteSettingController::class,'update'])->name('update.setting');
+

@@ -18,7 +18,7 @@
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         </ul>
-                        <img src="assets/images/chefs-01.jpg" alt="Chef #1">
+                        <img src="{{  asset('assets/images/chefs-01.jpg')}}" alt="Chef #1">
                     </div>
                     <div class="down-content">
                         <h4>Randy Walker</h4>
@@ -35,7 +35,7 @@
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
-                        <img src="assets/images/chefs-02.jpg" alt="Chef #2">
+                        <img src="{{  asset('assets/images/chefs-02.jpg')}}" alt="Chef #2">
                     </div>
                     <div class="down-content">
                         <h4>David Martin</h4>
@@ -52,7 +52,7 @@
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-google"></i></a></li>
                         </ul>
-                        <img src="assets/images/chefs-03.jpg" alt="Chef #3">
+                        <img src="{{ asset('assets/images/chefs-03.jpg')}}" alt="Chef #3">
                     </div>
                     <div class="down-content">
                         <h4>Peter Perkson</h4>
@@ -63,6 +63,8 @@
         </div>
     </div>
 </section>
+<!-- ***** Chefs Area Ends ***** -->
+
 <!-- ***** Reservation Us Area Starts ***** -->
 <section class="section" id="reservation">
     <div class="container">
@@ -170,6 +172,7 @@
         </div>
     </div>
 </section>
+<!-- ***** Reservation Area Ends ***** -->
 
 <!-- ***** Menu Area Starts ***** -->
 <section class="section" id="offers">
@@ -369,7 +372,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="tab-item">
-                                                        <img src="assets/images/tab-item-03.png" alt="">
+                                                        <img src="{{ asset('assets/images/tab-item-03.png')}}" alt="">
                                                         <h4>Orange Juice</h4>
                                                         <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                         <div class="price">
@@ -379,7 +382,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="tab-item">
-                                                        <img src="assets/images/tab-item-02.png" alt="">
+                                                        <img src="{{ asset('assets/images/tab-item-02.png')}}" alt="">
                                                         <h4>Fruit Salad</h4>
                                                         <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                         <div class="price">
@@ -395,7 +398,7 @@
                                             <div class="right-list">
                                                 <div class="col-lg-12">
                                                     <div class="tab-item">
-                                                        <img src="assets/images/tab-item-06.png" alt="">
+                                                        <img src="{{  asset('assets/images/tab-item-06.png') }}" alt="">
                                                         <h4>Fresh Chicken Salad</h4>
                                                         <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                         <div class="price">
@@ -405,7 +408,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="tab-item">
-                                                        <img src="assets/images/tab-item-01.png" alt="">
+                                                        <img src="{{  asset('assets/images/tab-item-01.png') }}" alt="">
                                                         <h4>Dollma Pire</h4>
                                                         <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                         <div class="price">
@@ -415,7 +418,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="tab-item">
-                                                        <img src="assets/images/tab-item-04.png" alt="">
+                                                        <img src="{{ asset('assets/images/tab-item-04.png') }}" alt="">
                                                         <h4>Omelette & Cheese</h4>
                                                         <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                         <div class="price">
@@ -435,4 +438,3 @@
         </div>
     </div>
 </section>
-<!-- ***** Chefs Area Ends ***** -->
