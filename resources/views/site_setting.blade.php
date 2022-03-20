@@ -1,7 +1,7 @@
 @extends('backend.layouts.master')
 @section('content')
 
-<form method="post" enctype="multipart/form-data" action="{{ route('update.setting')}}">
+<form  action="{{ route('update.setting') }}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">system name</label>

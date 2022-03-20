@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\site_setting;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SiteSettingController extends Controller
 {
@@ -12,10 +13,11 @@ class SiteSettingController extends Controller
         $settings = site_setting::find(1);
         return view('site_setting', compact('settings'));
        }
+
        public function update(Request $request)
        {
          //$  dd($request->all());
-           $logo_url ='';
+
            $validated = $request->validate([
                'system_name' => 'required',
                'phone' => 'required',
@@ -40,15 +42,9 @@ class SiteSettingController extends Controller
              'logo' =>$request->get('logo'),
            ];
 
-           DB::table('site_settings')->truncate();
+          DB::table('site_settings')->truncate();
            site_setting::insert($data);
-           return redirect()->route('restaurants');
-
-
-
-
-
-
+           return redirect()->back();
 
         }
     }

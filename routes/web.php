@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\restaurants;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\SiteSettingController;
+use App\Http\Controllers\MenuController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,9 +41,31 @@ Route::post('/admin/login/submit',[AdminLoginController::class,'submit'])->name(
 Route::get('/admin/logout',[AdminLoginController::class,'adminLogout'])->name('admin.logout');
 
 
+//RESERVATION//
+Route::post('/reservation',[AdminLoginController::class,'reservation'])->name('reservation');
+Route::get('/viewreservation',[AdminLoginController::class,'viewreservation'])->name('viewreservation');
+
+
+
+
+
+
+
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::view('/user/dashboard', 'layouts.frontend.layouts.master');
+
+// SITE_SETTING //
 Route::get('/site_setting',[SiteSettingController::class,'site'])->name('site.setting');
 Route::post('/update_setting',[SiteSettingController::class,'update'])->name('update.setting');
+
+//menu_list
+Route::get('/menu',[MenuController::class,'showdata'])->name('menu.list');
+Route::get('/create_menu',[MenuController::class,'create'])->name('add.newdata');
+Route::post('/menu_submit',[MenuController::class,'menu_submit'])->name('menu.submit');
+Route::post('/update_menu/{id}',[MenuController::class,'update'])->name('menus.update');
+
+Route::get('/edit_menu/{id}',[MenuController::class,'edit'])->name('menus.edit');
+Route::get('/delete_menu/{id}',[MenuController::class,'delete'])->name('menus.delete');
 

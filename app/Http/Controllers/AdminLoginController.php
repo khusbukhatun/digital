@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Admin;
+use App\Reservation;
 use Illuminate\Http\Request;
 
 class AdminLoginController extends Controller
@@ -52,6 +53,36 @@ class AdminLoginController extends Controller
           return redirect()->back();
       }
       return redirect()->route('admin.login');
-
 }
+
+public function reservation(Request $request) {
+    $data = [
+      'name' => $request->get('name'),
+      'email' => $request->get('email'),
+      'phone' => $request->get('phone'),
+      'guest' => $request->get('guest'),
+      'date' => $request->get('date'),
+      'time' => $request->get('time'),
+      'message' => $request->get('message'),
+
+  ];
+  reservation::insert($data);
+  return redirect()->back();
+
+  }
+
+  public function viewreservation()
+  {
+      $data=reservation::all();
+      return view("reservation", compact("data"));
+  }
+
+
+
+
+
+
+
+
+
 }
