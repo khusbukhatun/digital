@@ -15,11 +15,21 @@ use App\Http\Controllers\restaurants;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\MenuController;
+use App\menu;
+use App\site_setting;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
-    return view('welcome');
+    // $is_fetched = false;
+    // ifrrrr ($is_fetched) {
+        $settings = site_setting::find(1);
+        Session::put('site_setting', $settings);
+        // dd(Session::get('site_setting'));
+    //     $is_fetched = true;
+    // }
 
+    return view('welcome');
 });
 
 Route::get('/dashboard',[restaurants::class,'dashboard'])->name('dashboard');
@@ -40,16 +50,12 @@ Route::get('/admin/login',[AdminLoginController::class,'adminLogin'])->name('adm
 Route::post('/admin/login/submit',[AdminLoginController::class,'submit'])->name('admin.submit');
 Route::get('/admin/logout',[AdminLoginController::class,'adminLogout'])->name('admin.logout');
 
-
 //RESERVATION//
 Route::post('/reservation',[AdminLoginController::class,'reservation'])->name('reservation');
 Route::get('/viewreservation',[AdminLoginController::class,'viewreservation'])->name('viewreservation');
 
-
-
-
-
-
+//CHEFS//
+Route::get('/viewchef',[AdminLoginController::class,'viewchef'])->name('viewchef');
 
 
 Auth::routes();
@@ -57,11 +63,23 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::view('/user/dashboard', 'layouts.frontend.layouts.master');
 
 // SITE_SETTING //
-Route::get('/site_setting',[SiteSettingController::class,'site'])->name('site.setting');
-Route::post('/update_setting',[SiteSettingController::class,'update'])->name('update.setting');
+Route::get('/site_setting',[SiteSettingController::class,'site_settings'])->name('site.setting');
+Route::post('/update_setting',[SiteSettingController::class,'settings_update'])->name('update.setting');
 
 //menu_list
 Route::get('/menu',[MenuController::class,'showdata'])->name('menu.list');
+Route::get('/menu/list', function () {
+    // $is_fetched = false;
+    // if ($is_fetched) {
+        $menus = menu::find(1);
+        Session::put('menu', $menus);
+        // dd(Session::get('menu'));
+    //     $is_fetched = true;
+    // }
+
+    return view('welcome');
+});
+
 Route::get('/create_menu',[MenuController::class,'create'])->name('add.newdata');
 Route::post('/menu_submit',[MenuController::class,'menu_submit'])->name('menu.submit');
 Route::post('/update_menu/{id}',[MenuController::class,'update'])->name('menus.update');

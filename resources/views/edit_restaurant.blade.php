@@ -48,7 +48,7 @@
       <input type="text" class="form-control" value="{{ $restaurant->description ?? null }}" placeholder="Enter description" name="description">
     </div>
 
-   
+
     <div class="form-group">
       <label for="location">Location:</label>
       <input type="text" class="form-control" value="{{ $restaurant->location ?? null }}" placeholder="Enter location" name="location">
@@ -59,8 +59,6 @@
       <input type="text" class="form-control" value="{{ $restaurant->rating ?? null }}" placeholder="Enter rating" name="rating">
     </div>
 
-   
-    
     <button type="submit" class="btn btn-default">Update</button>
   </form>
 </div>

@@ -5,7 +5,7 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="{{ url('/') }}" class="logo">
-                    <img src="{{ asset('#') }}" align="klassy cafe html template">
+                    <img src="{{ Session::get('site_setting') ? Session::get('site_setting')->logo : '' }}" height="100px" width="auto" align="klassy cafe html template">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->

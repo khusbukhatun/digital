@@ -18,11 +18,12 @@
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         </ul>
-                        <img src="{{  asset('assets/images/me.jpg')}}" alt="me">
+                        <img src="{{  asset('assets/images/images1.jpg')}}" alt="me">
                     </div>
                     <div class="down-content">
-                        <h4>kushum </h4>
-                        <span>padhniyar</span>
+                        <h4> Cookie Chef</h4>
+                        <span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -35,11 +36,12 @@
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
-                        <img src="{{  asset('assets/images/me1.jpg')}}" alt="me #2">
+                        <img src="{{  asset('assets/images/sec2.png')}}" alt="me #2">
                     </div>
                     <div class="down-content">
-                        <h4>David Martin</h4>
-                        <span>Cookie Chef</span>
+                        <h4>expert</h4>
+
+
                     </div>
                 </div>
             </div>
@@ -52,11 +54,11 @@
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-google"></i></a></li>
                         </ul>
-                        <img src="{{ asset('assets/images/chefs-03.jpg')}}" alt="Chef #3">
+                        <img src="{{ asset('assets/images/pic.jpg')}}" alt="Chef #3">
                     </div>
                     <div class="down-content">
-                        <h4>Peter Perkson</h4>
-                        <span>Pancake Chef</span>
+                        <h1>chef</h1>
+
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Admin;
+use App\foodchef;
 use App\Reservation;
 use Illuminate\Http\Request;
 
@@ -75,6 +76,12 @@ public function reservation(Request $request) {
   {
       $data=reservation::all();
       return view("reservation", compact("data"));
+  }
+
+  public function viewchef()
+  {
+      $data=reservation::all();
+      return view("foodchef");
   }
 
 

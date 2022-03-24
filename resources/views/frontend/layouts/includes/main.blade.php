@@ -4,7 +4,7 @@
             <div class="col-lg-4">
                 <div class="left-content">
                     <div class="inner-content">
-                        <h4>DIGITAL RESTAURANT</h4>
+                        <h4>{{ Session::get('site_setting') ? Session::get('site_setting')->system_name : '' }}</h4>
                         <h6>THE BEST EXPERIENCE</h6>
                         <div class="main-white-button scroll-to-section">
                             <a href="#reservation">Make A Reservation</a>

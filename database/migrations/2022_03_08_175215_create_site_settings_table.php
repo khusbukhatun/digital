@@ -23,7 +23,7 @@ class CreateSiteSettingsTable extends Migration
             $table->string('instagram')->nullable();
             $table->string('twitter')->nullable();
             $table->string('copyright')->nullable();
-            $table->string('logo')->nullable();
+            $table->text('logo')->nullable();
             $table->timestamps();
         });
     }
