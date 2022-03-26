@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
-
+    <title>Digital Restaurant - Admin</title>
+    <link rel="icon" href="uploads\2fID71647576075momo.jpg" type="image/icon type">
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
@@ -27,14 +27,14 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         @include('backend.layouts.includes.sidebar')
-     
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
 
-               @include('backend.layouts.includes.header') 
+               @include('backend.layouts.includes.header')
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">

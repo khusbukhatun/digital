@@ -80,11 +80,30 @@ public function reservation(Request $request) {
 
   public function viewchef()
   {
-      $data=reservation::all();
-      return view("foodchef");
+      $data=foodchef::all();
+      return view("foodchef", compact('data'));
   }
 
+  public function uploadchef (Request $request){
 
+    $image_url = '';
+
+    if($request->hasFile('image')) {
+        $file = $request->file('image');
+        $new_name = str_random(5).time().$file->getClientOriginalName();
+        $path =public_path('/chefimage');
+        $file->move($path, $new_name);
+        $image_url = asset('chefimage/'.$new_name);
+    }
+
+    $data = [
+        'name' => $request->get('name'),
+        'speciality' => $request->get('speciality'),
+        'image' => $image_url ?? '',
+    ];
+        foodchef::insert($data);
+        return redirect()->back();
+  }
 
 
 

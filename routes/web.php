@@ -55,7 +55,9 @@ Route::post('/reservation',[AdminLoginController::class,'reservation'])->name('r
 Route::get('/viewreservation',[AdminLoginController::class,'viewreservation'])->name('viewreservation');
 
 //CHEFS//
-Route::get('/viewchef',[AdminLoginController::class,'viewchef'])->name('viewchef');
+Route::get('/viewchef', [AdminLoginController::class, 'viewchef'])->name('viewchef');
+Route::post('/uploadchef', [AdminLoginController::class, 'uploadchef'])->name('uploadchef');
+
 
 
 Auth::routes();

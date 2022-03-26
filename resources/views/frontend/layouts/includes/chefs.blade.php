@@ -8,25 +8,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="chef-item">
-                    <div class="thumb">
-                        <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                        <img src="{{  asset('assets/images/images1.jpg')}}" alt="me">
-                    </div>
-                    <div class="down-content">
-                        <h4> Cookie Chef</h4>
-                        <span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+
             <div class="col-lg-4">
                 <div class="chef-item">
                     <div class="thumb">
@@ -45,23 +27,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="chef-item">
-                    <div class="thumb">
-                        <div class="overlay"></div>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google"></i></a></li>
-                        </ul>
-                        <img src="{{ asset('assets/images/pic.jpg')}}" alt="Chef #3">
-                    </div>
-                    <div class="down-content">
-                        <h1>chef</h1>
 
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

@@ -13,6 +13,7 @@
         rel="stylesheet">
 
     <title>Digital Restaurant</title>
+    <link rel="icon" href="logogo/rr.jpg" type="image/icon type">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
