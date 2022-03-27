@@ -21,15 +21,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
-    // $is_fetched = false;
-    // ifrrrr ($is_fetched) {
         $settings = site_setting::find(1);
         Session::put('site_setting', $settings);
-        // dd(Session::get('site_setting'));
-    //     $is_fetched = true;
-    // }
-
-    return view('welcome');
+        $data['menus'] = menu::all();
+    return view('welcome',$data);
 });
 
 Route::get('/dashboard',[restaurants::class,'dashboard'])->name('dashboard');
